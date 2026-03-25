@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
+	
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
@@ -98,6 +99,7 @@
 }
 
 
+
 /* project image zoom effect */
 
 .zoom-effect {
@@ -115,11 +117,38 @@
   /*max-height: 600px; /* limits the height */
 .one-third.img {
   background-image: url('images/bg_1.png');
-  background-repeat: no-repeat;      /* repeats the image in a grid */
-  background-size: 500px 500px;   /* each tile is 200px by 200px, adjust as needed */
-  background-position: center;  /* start tiling from top-left */
-  height: 400px;                  /* height of the section */
+  background-repeat: no-repeat;     
+  background-size: 500px 500px;  
+  background-position: center;  
+  height: 400px; 
+}                
+/* Remove forced full height */
+#home-section .slider-item {
+  position: relative;
 }
+
+/* Center properly without extra space */
+#home-section .slider-text {
+  min-height: 100vh;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Remove scroll shift */
+#home-section .one-forth {
+  transform: none !important;
+}
+
+/* Ensure text centered */
+#home-section .text {
+  width: 100%;
+  text-align: center;
+} 
+
 </style>
 
 
@@ -145,72 +174,44 @@
 	    </div>
 	  </nav>
 	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Keerthi Erukulla</span></h1>
+  <div class="home-slider owl-carousel">
+    <div class="slider-item">
+      <div class="overlay"></div>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+      <div class="container">
+        <div class="row slider-text align-items-center justify-content-center text-center">
 
-						<script>
+          <!-- ✅ FULL WIDTH CENTERED CONTENT -->
+          <div class="col-md-12 d-flex align-items-center justify-content-center ftco-animate">
 
-						// Initialize the typing animation
-						let typingAnimationElement = document.getElementById('typing-animation');
+            <div class="text text-center">
+              
+              <span class="subheading">Hello!</span>
 
-						// Create an array of typing text
-						/* const typingTexts = [
-						'Engineer  ',
-						'YouTuber  ',
-						'Teacher   ',
-						];*/
+              <h1 class="mb-4 mt-3">
+                I'm <span>Keerthi Erukulla</span>
+              </h1>
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+              <!-- Typing Animation -->
+              <span id="typing-animation"></span>
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+              <br><br>
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
+              <p>
+                <a href="https://linkedin.com/in/keerthi-erukulla-522726389"
+                   class="btn btn-white btn-outline-white py-3 px-4">
+                   Professional Profile
+                </a>
+              </p>
 
-						</script>
+            </div>
+          </div>
 
-						<br>
-						<br>
-			            <h2>Keerthi Erukulla</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p> 
-							<p><a href="https://linkedin.com/in/keerthi-erukulla-522726389 " class="btn btn-white btn-outline-white py-3 px-4">Professional Profile</a></p>
-
-
-
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -356,7 +357,7 @@ Focused on writing clean code and developing scalable applications.</p>
 		<div class="row">
 				<div class="col-md-6">
   <div class="resume-wrap ftco-animate">
-    <span class="date">May 2024 – Dec 2024</span>
+    <span class="date">Nov 2023 – Dec 2024</span>
     <h2>Software Engineer</h2>
     <span class="position">TechPoint</span>
     <p class="mt-4">
