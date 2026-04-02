@@ -195,14 +195,48 @@
               <!-- Typing Animation -->
               <span id="typing-animation"></span>
 
-              <br><br>
+						<script>
 
-              <p>
-                <a href="https://linkedin.com/in/keerthi-erukulla-522726389"
-                   class="btn btn-white btn-outline-white py-3 px-4">
-                   Professional Profile
-                </a>
-              </p>
+						// Initialize the typing animation
+						let typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						/* const typingTexts = [
+						'Engineer  ',
+						'YouTuber  ',
+						'Teacher   ',
+						];*/
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Keerthi Erukulla</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p> 
+							<p><a href="https://linkedin.com/in/keerthi-erukulla-522726389 " class="btn btn-white btn-outline-white py-3 px-4">Professional Profile</a></p>
+
+
 
             </div>
           </div>
@@ -437,16 +471,18 @@ Focused on writing clean code and developing scalable applications.</p>
           <div class="col-md-7 heading-section text-center ftco-animate">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
-<p>Projects that show how I turn ideas into real, scalable apps using code, cloud, and creativity.</p>          </div>
+<p>Projects that show how I turn ideas into real, scalable apps using code, cloud, and creativity.<br>
+  NOTE: Click on the project images to see the live applications. if you want to see the code, please click on the project profile title 
+</p>          </div>
         </div>
         <div class="row d-flex">
           <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry justify-content-end">
               <!-- <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
               </a>  -->
-			  <div class="block-20 zoom-effect" style="background-image: url('images/p1.png');"></div>
+			  <a href="https://chatbot-ai-ta0v.onrender.com/"><div class="block-20 zoom-effect" style="background-image: url('images/p1.png');"></div></a>
 			  <div class="text mt-3 float-right d-block">
-  <h3 class="heading">AI Chatbot Application</h3>
+  <a href="https://github.com/keerthierukulla2-coder/chatbot-ai"><h3 class="heading">AI Chatbot Application</h3></a>
   <p>Built a chatbot using Python and NLP to handle real-time user queries with smart intent recognition and smooth conversational flow.</p>
 </div>
             </div>
@@ -455,10 +491,11 @@ Focused on writing clean code and developing scalable applications.</p>
           	<div class="blog-entry justify-content-end">
               <!-- <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
               </a> -->
-			  <div class="block-20 zoom-effect" style="background-image: url('images/pr2.png');"></div>
+			  <a href="https://hospital-management-system-dix6.onrender.com/"><div class="block-20 zoom-effect" style="background-image: url('images/pr2.png');"></div></a>
 
               <div class="text mt-3 float-right d-block">
-  <h3 class="heading">Hospital Management System</h3>
+  <a href="https://github.com/keerthierukulla2-coder/hospital-management-system"><h3 class="heading">Hospital Management System</h3></a>
+
   <p>Developed a web-based system to manage patients, doctors, and pharmacy records with efficient data handling using MySQL.</p>
 </div>
             </div>
@@ -467,10 +504,10 @@ Focused on writing clean code and developing scalable applications.</p>
           	<div class="blog-entry">
               <!-- <a href="https://github.com/rishabhnmishra/Madhav_Store_Analysis_PowerBI/blob/main/Madhav%20Store%20dashboard.jpg" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
               </a> -->
-			  <div class="block-20 zoom-effect" style="background-image: url('images/p3.png');"></div>
+			  <a href="https://app-play-rating-predictor.streamlit.app/"><div class="block-20 zoom-effect" style="background-image: url('images/p3.png');"></div></a>
 
               <div class="text mt-3 float-right d-block">
-  <h3 class="heading">Google Play Store Rating Prediction</h3>
+  <a href="https://github.com/keerthierukulla2-coder/google-play-rating-predictor"><h3 class="heading">Google Play Store Rating Prediction</h3></a>
   <p>Analyzed app data and built predictive models to identify rating trends using data preprocessing and feature engineering.</p>
 </div>
             </div>
